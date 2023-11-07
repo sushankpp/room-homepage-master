@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+  --font-family: 'League Spartan', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+  font-size: 19px;
+  color: var(--White);
+  font-weight: 500;
+  padding-bottom: 0.3rem;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  cursor: pointer;
+  font-size: 40px;
+  width: 90%;
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+p {
+  font-size: 15px;
+  text-align: justify;
+  color: var(--Dark-Gray);
+  line-height: 1.5rem;
+}
+
+header {
+  background-image: url('./images/desktop-image-hero-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 550px;
+  aspect-ratio: 16/9;
+  padding: 4rem;
+}
+
+ul {
+  display: flex;
+  padding-left: 7rem;
+  margin-top: -1.3rem;
+}
+
+.logo {
+  cursor: pointer;
+  padding-right: 3rem;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding-right: 2rem;
+}
+
+li a:hover {
+  color: var(--Very-Dark-Gray);
+  border-bottom: 2px solid var(--Dark-Gray);
+  transition: color 0.5s ease;
+}
+
+.info-section {
+  margin: 5.5rem;
+  position: relative;
+}
+
+.about {
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  color: var(--Dark-Gray);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3zs ease;
+}
+
+.button:hover {
+  color: var(--Very-Dark-Gray);
+  transition: color 0.3s ease;
+}
+
+.left-arrow,
+.right-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  width: 100px;
+  height: 70px;
+  background-color: var(--Very-Dark-Gray);
+  transition: background-color 0.5 ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: var(--Dark-Gray);
+  transition: background-color 0.5s ease;
+}
+
+.left-arrow {
+  left: -5.5rem;
+  bottom: -5.5rem;
+}
+
+.right-arrow {
+  left: 0.5rem;
+  bottom: -5.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+.article,
+.article img {
+  width: 500px;
+  height: 257px;
+}
+
+.article-3 img {
+  width: 520px;
+}
+
+.article-2 {
+  width: 595px;
+  margin: 2.5rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  padding-bottom: 1rem;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 1.5rem;
+}
+
+.hamburger,
+.close {
+  display: none;
+}
+
+@media only screen and (max-width: 765px) {
+  .hamburger,
+  .close {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .close {
+    top: -1rem;
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    position: relative;
+    background-image: url('./images/mobile-image-hero-1.jpg');
+    height: 450px;
+    aspect-ratio: 1/1;
+    padding: 2rem;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 0;
+    top: -1rem;
+    left: 50%;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  li {
+    list-style-type: none;
+    padding-left: 1rem;
+  }
+
+  li:not(:last-of-type) {
+    padding-left: 1rem;
+  }
+
+  li a {
+    color: var(--Very-Dark-Gray);
+  }
+
+  .nav-bar {
+    background-color: var(--White);
+    padding: 3rem;
+    position: relative;
+    top: -5rem;
+    margin: 0 -2rem;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .logo.clicked {
+    display: none;
+    transition: all 0.1s ease;
+  }
+
+  .nav-bar.click {
+    transform: translateX(0%);
+    transition: transform 0.5s ease;
+  }
+
+  .close.clicked {
+    display: block;
+    transition: display 0.5s ease;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    width: 60px;
+    bottom: 25.2rem;
+    right: 0;
+  }
+
+  .left-arrow {
+    left: 16.4rem;
+  }
+
+  .right-arrow {
+    left: 20.1rem;
+  }
+
+  .info-section {
+    margin: 0;
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-1,
+  .article-3,
+  .article-2 {
+    width: 350px;
+  }
+}
